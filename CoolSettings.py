@@ -71,3 +71,8 @@ class CoolSettings(object):
 
     def save(self):
         self.json_settings_save()
+
+    @property
+    def update(self):
+        self.json_settings_load()
+        return self.json_settings
