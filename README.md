@@ -8,6 +8,8 @@
 from CoolSettings import CoolSettings
 ```
 
+---
+
 ### 2. Далее - инициируем словарь с дефолтными настройками:
 ```python
 default_settings_parameters_description = {
@@ -21,6 +23,8 @@ default_settings_parameters_description = {
 ```
 Как видите, настройки могут иметь разный тип
 
+---
+
 ### 3. Иницируем работу класса:
 ```python
 CS = CoolSettings(
@@ -28,6 +32,8 @@ CS = CoolSettings(
                     default_parameters=default_settings_parameters_description,     # словарь с дефолтными параметрами
                     debug=True)                                                     # debug в консоль
 ```
+
+---
 
 ### 4. Получаем настройки:
 ```python
@@ -45,6 +51,8 @@ for item in JSON_Settings.items():
 ('settings5', {'key': 'key1', 'value': 'value1'})
 ```
 
+---
+
 ### 5. Доступ к настройкам:
 Получив данные из json-файла, Вы можете работать с этими настройками, как с обычным словарём:
 ```python
@@ -61,13 +69,21 @@ for item in JSON_Settings.items():
 ('settings6', 'very_new_value')                     # значение settings 6 поменялось
 ```
 
+---
+
 ### 6. Сохранить настройки в файл
 ```python
 CS.save()
 ```
 
+---
+
 ### 7. Удалить ненужную переменную настройки
 Удаление происходит только если Вы удалите ненужное значение из словаря дефолтных значений (для подробностей - читайте далее)
+
+---
+---
+---
 
 ## Основное отличие от других библиотек для хранения настроек
 
