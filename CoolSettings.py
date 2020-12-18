@@ -26,8 +26,11 @@ class CoolSettings(object):
 
     def default_settings_generator(self):
         arr = {}
+        # print(self.default_parameters)
         for DefaultPreset in self.default_parameters.items():
-            arr[DefaultPreset[0]] = DefaultPreset[1][1]
+            # print(DefaultPreset)
+            # arr[DefaultPreset[0]] = DefaultPreset[1][1]
+            arr[DefaultPreset[0]] = DefaultPreset[1]
         return arr
 
     def json_settings_save(self):
